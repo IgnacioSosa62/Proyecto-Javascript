@@ -1,42 +1,36 @@
 
 
+let postre = prompt("Ingrese el plato que quiera comprar");
 
-const anioActual = 2022;
-let nombre = prompt("ingrese su nombre");
-let apellido = prompt("ingrese su apellido");
-let anioNac = prompt("¿Cual es tu año de nacimiento?");
+let adicional = prompt("Ingrese de que sabor lo quiere");
 
-while (!nombre) {
-    nombre = prompt("Ingrese su nombre:");
+let Pago = prompt("Ingrese con que metodo va a pagar");
 
+
+
+while(!postre) {
+    postre = prompt("Ingrese el plato que quiera comprar");
 }
 
-while (!apellido) {
-    apellido = prompt("Ingrese su apellido:");
-
+while(!adicional) {
+    adicional = prompt("Ingrese de que sabor lo quiere");
 }
 
-while (!anioNac) {
-    {
-    anio_nac = prompt("Ingrese su nombre:");
-    }
+while(!Pago) {
+    Pago = prompt("Ingrese con que metodo va a pagar");
 }
 
-let edad = anioActual - anioNac;
 
-let mensaje = "¿Confirma que los datos ingresados son correctos?";
+let confirmacion = "¿Confirma que los datos ingresados son correctos?";
 
-mensaje += "\n" + "Nombre: " + nombre;
-mensaje += "\n" + "Apellido: " + apellido;
-mensaje += "\n" + "Edad: " + edad;
+confirmacion += "\n" + "Postre: " + postre;
+confirmacion += "\n" + "Adicional: " + adicional;
+confirmacion += "\n" + "Metodo de pago: " + Pago;
 
+let respuesta = confirm(confirmacion);
 
-let respuesta = confirm(mensaje);
-
-while (respuesta != "") {
-
-    if (respuesta) {
-
-        alert("Los datos han sido guardados");
+while (respuesta !="") {
+    if(respuesta){
+        alert ("Se ha tomado el pedido");
     }
 }
