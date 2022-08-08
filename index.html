@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Sass/Style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Proyecto Javascript</title>
 </head>
 <body>
@@ -34,6 +36,20 @@
                 </article>
             </div>
         </section>
+
+        <section id="Contacto">
+            <form id="form" action="">
+                <h3 class="tag"><span>Hablemos</span></h3>
+                <label for="name">Nombre Completo<span>*</span></label>
+                <input name="name" type="text" id="name" placeholder="">
+                <label for="email">Correo Electronico <span>*</span></label>
+                <input name="email" type="text" id="email" placeholder="">
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <button  id="submit" type="submit" class="brn primary full">
+            </form>
+            <a href="mailto:ignaciososa62@gmail.com" id="referencia">Mail</a>
+        </section>
     </main>
 
 
@@ -45,5 +61,7 @@
 
 
     <script src="./JS/main.js"></script>
+    <script src="./JS/Form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
