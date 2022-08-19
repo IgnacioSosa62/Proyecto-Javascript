@@ -1,4 +1,11 @@
 
+    Swal.fire(
+        'The Internet?',
+        'That thing is still around?',
+        'question'
+    )
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const baseDeDatos = [
         {
