@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Sass/Style.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+
     <title>Proyecto Javascript</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="./Img/Pasteleria.png" alt="Logo">
-            <img src="./Img/shopping_cart_FILL0_wght300_GRAD-25_opsz48.png" alt="Carrito">
-            <img src="./Img/search_FILL0_wght300_GRAD-25_opsz48.png" alt="Busqueda">
-        </nav>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <a href="#"><img class="Logopasteleria" src="./Img/Que_Rico_Gaby-removebg-preview.png"
+                            alt="Logo"></a>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Bienvenidos A Que Rico Gaby</h1>
-        <h2>¡Chequea nuestros productos!</h2>
-        <section class="Productos">
-            <div class="productTitle">
-                <h2>Tortas</h2>
-                <p>x productos</p>
-            </div>
-            <div class="catalogo">
-                <article class="platos">
-                    <div class="producto">
-                        <img src="#" alt="">
-                        <h3>Plato</h3>
-                        <p>Precio</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="Contacto">
-            <form id="form" action="">
-                <h3 class="tag"><span>Hablemos</span></h3>
-                <label for="name">Nombre Completo<span>*</span></label>
-                <input name="name" type="text" id="name" placeholder="">
-                <label for="email">Correo Electronico <span>*</span></label>
-                <input name="email" type="text" id="email" placeholder="">
-                <label for="message">Mensaje</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button  id="submit" type="submit" class="brn primary full">
-            </form>
-            <a href="mailto:ignaciososa62@gmail.com" id="referencia">Mail</a>
-        </section>
+    <h1 class="Presentacion">Bienvenidos a Que Rico Gaby</h1>
+    <h2 class="subtitulo">¡Chequea nuestros productos!</h2>
     </main>
 
+    <div class="container">
+        <div class="row">
+
+            <main id="items" class="col-sm-8 row"></main>
+
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
+        </div>
+    </div>
+
+
+    <section id="Contacto">
+        <form id="form" action="">
+            <h3 class="tag"><span>Hablemos</span></h3>
+            <label for="name">Nombre Completo<span>*</span></label>
+            <input name="name" type="text" id="name" placeholder="">
+            <label for="email">Correo Electronico <span>*</span></label>
+            <input name="email" type="text" id="email" placeholder="">
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <button id="submit" type="submit" class="brn primary full">
+        </form>
+        <a href="mailto:ignaciososa62@gmail.com" id="referencia">Mail</a>
+    </section>
 
 
 
 
-    
+
+
+
 
 
 
     <script src="./JS/main.js"></script>
     <script src="./JS/Form.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
