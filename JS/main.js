@@ -4,30 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseDeDatos = [
         {
             id: 1,
-            nombre: 'ChesseCake de Frutilla',
+            producto: 'ChesseCake de Frutilla',
             precio: 2500,
             imagen: 'https://img.freepik.com/foto-gratis/torta-mermelada-cerezas-mesa_23-2147802607.jpg?w=740&t=st=1660922463~exp=1660923063~hmac=dc663f093bf27d66108d9ead1f87395d370f77bb2e66e23149e56cc9ef66070d' 
         },
         {
             id: 2,
-            nombre: 'Muffin de Chocolate',
+            producto: 'Muffin de Chocolate',
             precio: 300,
             imagen  : 'https://img.freepik.com/fotos-premium/magdalenas-caseras-zanahoria-recien-horneadas-avellana-naranja-sobre-fondo-madera_186277-4792.jpg?w=740'
         },
         {
             id: 3,
-            nombre: 'Galletita de Coco',
+            producto: 'Galletita de Coco',
             precio: 250,
             imagen: 'https://img.freepik.com/fotos-premium/galletas-coco-sobre-superficie-oscura-horneando-comida-vegetariana_97840-3043.jpg?w=740'
         },
         {
             id: 4,
-            nombre: 'Brownies',
+            producto: 'Brownies',
             precio: 600,
             imagen: 'https://img.freepik.com/foto-gratis/tarta-pastel-brownie-chocolate-platos-caseros_114579-582.jpg?w=740&t=st=1660922830~exp=1660923430~hmac=bfa4b636611a4586f9fb7644e7cdd835edee718ccc45b2e759530134f6f9eb99'
         }
 
     ];
+
+    const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor)};
+
+    guardarLocal("listaProductos", JSON.stringify(baseDeDatos))
+
+
 
     let carrito = [];
     const moneda = '$';
@@ -49,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const NodoTitle = document.createElement('h5');
             NodoTitle.classList.add('card-title');
-            NodoTitle.textContent = info.nombre;
+            NodoTitle.textContent = info.producto;
 
             const NodoImagen = document.createElement('img');
             NodoImagen.classList.add('img-fluid');
@@ -104,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const Nodo = document.createElement('li');
             Nodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            Nodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${moneda}`;
+            Nodo.textContent = `${numeroUnidadesItem} x ${miItem[0].producto} - ${miItem[0].precio}${moneda}`;
 
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -176,3 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarProductos();
     renderizarCarrito();
 });
+
+
+const url = './JS/Inventario.json';
