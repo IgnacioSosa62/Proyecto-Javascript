@@ -60,17 +60,32 @@
 
 
     <section id="Contacto">
-        <form id="form" action="">
-            <h3 class="tag"><span>Hablemos</span></h3>
-            <label for="name">Nombre Completo<span>*</span></label>
-            <input name="name" type="text" id="name" placeholder="">
-            <label for="email">Correo Electronico <span>*</span></label>
-            <input name="email" type="text" id="email" placeholder="">
-            <label for="message">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            <button id="submit" type="submit" class="brn primary full">
+        
+            <h2 class="form_title"><span>¡Envianos el pedido!</span></h2>
+            <form id="form">
+            <div class="form_container" action="e946c90f4ef91267b8eeef3da177884c" method="POST">
+                <div class="form_group">
+                    <input type="text" id="name" name="Nombre" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Nombre:</label>
+                    <span class="form_line"></span>
+                </div>
+
+                <div class="form_group">
+                    <input type="text" id="email" name="Mail" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Email:</label>
+                    <span class="form_line"></span>
+                </div>
+
+                <div class="form_group">
+                    <input type="text" id="Mensaje" name="Descripcion" class="form_input" placeholder=" ">
+                    <label for="name" class="form_label">Escriba su pedido:</label>
+                    <span class="form_line"></span>
+                </div>
+
+                <input type="submit" class="form_submit" value="Enviar">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
         </form>
-        <a href="mailto:ignaciososa62@gmail.com" id="referencia">Mail</a>
     </section>
 
 
@@ -85,7 +100,6 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./JS/SweetAlert.js"></script>
 </body>
 
 </html>
